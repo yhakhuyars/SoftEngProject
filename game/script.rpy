@@ -23,7 +23,6 @@ label start:
     hide zioney
 
     cmc "Ten years? We’ll be twenty then."
-    show nico angry
 
     mc "Yeah, able to drink, and to smoke,"
 
