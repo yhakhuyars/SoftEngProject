@@ -8,7 +8,7 @@ label start:
 
     scene black with dissolve
 
-    show text "Chapter 1" with Pause(3.5)
+    show text "Prologue" with Pause(1.5)
 
     scene black with dissolve
 
@@ -58,6 +58,12 @@ label start:
 
     cmc "as if I would be alone in the future."
 
-label chapter1:
+    scene black with dissolve
+
+    show text "Chapter 1" with Pause(1.5)
+
+    scene black with dissolve
+
+    jump chapter1
 
     
