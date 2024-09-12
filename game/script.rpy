@@ -6,10 +6,14 @@ define cmc = Character('Himeko', color="c8ffc8")
 
 label start:
 
-    scene bg festival
-    play music "audio/bgm_festival.mp3" fadein 1.0 fadeout 1.0 volume 0.25
+    scene black with dissolve
 
-    pause
+    show text "Chapter 1" with Pause(3.5)
+
+    scene black with dissolve
+
+    scene bg festival with dissolve
+    play music "audio/bgm_festival.mp3" fadein 1.0 fadeout 1.0 volume 0.25
 
     pause
 
