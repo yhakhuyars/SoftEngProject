@@ -1,8 +1,15 @@
 ﻿#characters
-define mc = Character('Aoki', color="00A2FF")
-define fmc = Character('Miyabi', color="FFA680")
-define cmc = Character('Himeko', color="c8ffc8")
+define char_mc = Character('Kusonoki', color="00A2FF", image='i_mc', callback=name_callback, cb_name='mc')
+define char_fmc = Character('Miyagi', color="FFA680", image='i_fmc', callback=name_callback, cb_name='fmc')
+define char_cmc = Character('Himeno', color="c8ffc8", image='i_cmc', callback=name_callback, cb_name='cmc')
 
+#images
+
+image i_mc normal = At('mc_normal', sprite_highlight('mc'))
+image i_cmc normal = At('miyagi_normal', sprite_highlight('cmc'))
+image i_cmc sad = At('miyagi_sad', sprite_highlight('cmc'))
+image i_cmc annoy = At('miyagi_annoy', sprite_highlight('cmc'))
+image i_cmc smile = At('miyagi_smile', sprite_highlight('cmc'))
 
 label start:
 
@@ -17,46 +24,59 @@ label start:
 
     pause
 
-    mc "In the summer ten years from now,"
+    show i_mc normal at right with dissolve
 
-    show zioney smile at right
+    char_mc "In the summer ten years from now,"
 
-    mc "We’ll finally feel like we’re glad to have lived,"
+    char_mc "We’ll finally feel like we’re glad to have lived,"
 
-    mc "deep in our hearts and we’ll show those dunces."
-    hide zioney
+    char_mc "deep in our hearts and we’ll show those dunces."
 
-    cmc "Ten years? We’ll be twenty then."
+    show i_cmc normal at left with dissolve
 
-    mc "Yeah, able to drink, and to smoke,"
+    char_cmc "Ten years? We’ll be twenty then."
 
-    mc "And to marry…"
+    char_mc "Yeah, able to drink, and to smoke,"
 
-    mc "But, I don’t feel like I’ll be able to do it."
+    char_mc "And to marry…"
 
-    cmc "Why?"
+    char_mc "But, I don’t feel like I’ll be able to do it."
 
-    mc "There’s too much stuff I don’t like."
+    show i_cmc sad
 
-    cmc "Me too."
+    char_cmc "Why?"
 
-    cmc "Well, in that case… When we turn twenty and get famous.."
+    char_mc "There’s too much stuff I don’t like."
 
-    cmc "If by then, as shameful as it is, we haven’t found anyone we want to marry… If that happens."
+    show i_cmc normal
 
-    cmc "Would you want to be with me…"
+    char_cmc "Me too."
 
-    cmc "as fellow \“people left on the shelf?\”"
+    show i_cmc smile
 
-    mc "What’s that about? Really now…"
+    char_cmc "Well, in that case… When we turn twenty and get famous.."
 
-    cmc "It’s a joke! Forget it okay?"
+    char_cmc "If by then, as shameful as it is, we haven’t found anyone we want to marry… If that happens."
 
-    cmc "I just wanted to hear myself say it…"
+    show i_cmc normal
 
-    cmc "..."
+    char_cmc "Would you want to be with me…"
 
-    cmc "as if I would be alone in the future."
+    char_cmc "as fellow \“people left on the shelf?\”"
+
+    char_mc "What’s that about? Really now…"
+
+    show i_cmc annoy
+
+    char_cmc "It’s a joke! Forget it okay?"
+
+    char_cmc "I just wanted to hear myself say it…"
+
+    show i_cmc sad
+
+    char_cmc "..."
+
+    char_cmc "as if I would be alone in the future."
 
     scene black with dissolve
 

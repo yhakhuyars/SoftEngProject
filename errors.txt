@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 61: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    scene black with dissolve
+File "game/script.rpy", line 35: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    show i_cmc normal at left with dissolve
     ^
 
 Ren'Py Version: Ren'Py 8.3.0.24082114
-Fri Sep 13 00:18:01 2024
+Mon Oct  7 20:07:33 2024
