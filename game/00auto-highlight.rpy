@@ -97,6 +97,7 @@ init -10 python:
         if event == "begin":
             speaking_char = name
 
+
     # Used to help make sprite_tf more reusable while still using the function statement in the ATL
     class SpriteFocus(object):
         # char_name - Used to check who we are manipulating. This is used as a

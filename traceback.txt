@@ -1,24 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/chapter1.rpy", line 7, in script
-    mc "Man what the sigma just happened"
-Exception: Sayer 'mc' is not defined.
+  File "game/chapter1.rpy", line 115, in script
+    char_clerk "Hello."
+Exception: Sayer 'char_clerk' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/chapter1.rpy", line 7, in script
-    mc "Man what the sigma just happened"
+  File "game/chapter1.rpy", line 115, in script
+    char_clerk "Hello."
   File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\ast.py", line 2572, in execute
     Say.execute(self)
   File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\ast.py", line 575, in execute
     who = eval_who(self.who, self.who_fast)
   File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\ast.py", line 464, in eval_who
     raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'mc' is not defined.
+Exception: Sayer 'char_clerk' is not defined.
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.0.24082114
-Project KV 1.0
-Mon Oct  7 19:55:28 2024
+Lifespan 1.0
+Sun Nov 24 21:06:23 2024
