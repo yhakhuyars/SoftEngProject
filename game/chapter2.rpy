@@ -66,6 +66,7 @@ label chapter2:
 
     char_mc "(As it happens, the teacher said that there was no right answer.)"
     char_mc "(But a right answer did sort of exist.)"
+    char_mc "I ilike niggers"
 
     # End flashback and return to the present
     #window hide
