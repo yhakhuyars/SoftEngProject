@@ -10,7 +10,7 @@ label chapter1:
 
     char_mc "(A part-time job in blazing heat.)"
 
-    char_mc "(After deeply bowing my head with the eleventh 'I’m really sorry' of the day, it seems I had a dizzy spell and fell unconscious.)"
+    char_mc "(After deeply bowing my head with the eleventh 'I’m really sorry of the day' it seems I had a dizzy spell and fell unconscious.)"
 
     char_mc "(The manager sent me a text telling me to rest, but I don’t think I’ll be hearing back from him tomorrow.)"
 

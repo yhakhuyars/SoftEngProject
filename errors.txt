@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 2: keyword argument repeated: callback
-
-File "game/script.rpy", line 3: keyword argument repeated: callback
-
-File "game/script.rpy", line 4: keyword argument repeated: callback
-
-File "game/script.rpy", line 5: keyword argument repeated: callback
+File "game/screens.rpy", line 304: Line is indented, but the preceding textbutton statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    xoffset 60
+    ^
 
 Ren'Py Version: Ren'Py 8.3.0.24082114
-Thu Nov 21 00:07:12 2024
+Mon Nov 25 18:17:48 2024
