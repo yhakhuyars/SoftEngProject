@@ -4,12 +4,13 @@ label chapter2:
 
     show text "Chapter 2" with Pause(1.5)
 
-    #scene bg office with dissolve
+    scene bg office with dissolve
 
-    # Scene: Girl's announcement
-    char_fmc "Your evaluation will take about three hours."
+    char_fclerk "Your evaluation will take about three hours."
 
     char_mc "(When they first mentioned “selling lifespan”, what immediately came to mind was a morality lesson from elementary school.)"
+
+    stop music fadeout 1.0
 
     # Transition to flashback
     #window hide
@@ -79,6 +80,90 @@ label chapter2:
     #stop music fadeout 2.0
     #play music "audio/mysterious_bgm.mp3"
     #window show
+
+    scene bg shop # You'll need to define this background
+    
+    # Ten years later narration
+    char_mc "(Ten years later, when I was twenty-one, I did in fact sell my lifespan and learn its value.)"
+
+    char_mc "I hope it sells for a lot…"
+
+    char_mc "(While waiting for the evaluation, I tried to make a low-ball estimate of how much my life was going to be.)"
+
+    char_mc "(I was thinking, at minimum, maybe 300 million. Compared to my \"3 billion\" from when I was a kid, it was a rather modest estimate.)"
+
+    char_mc "(However, I'd forgotten that thought I had.)"
+
+    # Shop girl interaction
+    char_fclerk "Mr. Kusonoki, your evaluation has been completed"
+
+    char_mc "\"Mr. Kusonoki.\""
+
+    char_mc "(I didn't recall ever giving them my name, or any form of identification.)"
+
+    char_mc "(And yet, they knew it, some way or another. I guess that follows, since the business here goes beyond common sense.)"
+
+    char_fclerk "3…"
+
+    char_mc "(3 billion…!!!)"
+
+    char_mc "(My childhood estimate was right on…!!!)"
+
+    # Detailed evaluation scene
+    char_fclerk "These are your results…"
+    char_fclerk "What would you like to do?"
+
+    char_mc "(300,000… per year…)"
+
+    char_mc "(If I lived for eighty more years, that would be 24 million in all.)"
+
+    char_mc "(24 million… 24 million…)"
+
+    char_mc "*sigh*"
+
+    char_mc "(Surely that's too cheap by any means?)"
+
+    char_fclerk "…?"
+
+    char_mc "(I guess I'll just have to take 24 million…)"
+
+    # Harsh reality of the evaluation
+    char_fclerk "Concerning your per-year value…"
+    char_fclerk "You were given the bare minimum of 10,000 yen."
+    char_fclerk "And as you have thirty years and three months remaining…"
+    char_fclerk "You will be able to leave here with up to 300,000 yen."
+
+    char_mc "*smirks*"
+    char_mc "Hah…"
+
+    char_mc "(There on the form were my results, many orders of magnitude below my expectations.)"
+
+    char_mc "I want to know more about your standards."
+
+    # Explanation of valuation
+    char_fclerk "The detailed evaluations are carried out by a separate consulting body, so I don't know the specifics my self."
+
+    char_fclerk "Happiness… Actualization… Contribution…"
+    char_fclerk "The degree to which such factors are present can greatly affect the value."
+    char_fclerk "Or so I hear."
+
+    char_fclerk "In short, the value of your remaining years is…"
+    char_fclerk "How happy a life it is, how it makes others happy,"
+    
+    char_mc "(If I won't be happy,)"
+    
+    char_fclerk "How many dreams are achieved,"
+    
+    char_mc "(Won't make anyone happy,)"
+    
+    char_fclerk "How much it contributes to society, so on and so forth… These things decide the value."
+
+    char_mc "(Won't achieve any dreams,)"
+    char_mc "(Won't contribute to society…)"
+    char_mc "(Where can I look to for salvation…?)"
+
+    # Final narration
+    char_mc "(Ultimately, I sold off all thirty years, keeping only three months.)"
 
 
 

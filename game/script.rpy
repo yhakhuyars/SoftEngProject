@@ -1,6 +1,4 @@
-﻿
-
-#characters
+﻿#characters
 define char_mc = Character('Kusonoki', color="00A2FF", image='i_mc', callback=name_callback, cb_name='mc')
 define char_fmc = Character('Miyagi', color="FFA680", image='i_fmc', callback=name_callback, cb_name='fmc')
 define char_cmc = Character('Himeno', color="c8ffc8", image='i_cmc', callback=name_callback, cb_name='cmc')
@@ -11,6 +9,7 @@ define char_cls1 = Character('Classmate 1', color="FFFFFF", image='i_cls1', call
 define char_cls2 = Character('Classmate 2', color="FFFFFF", image='i_cls2', callback=name_callback, cb_name='cls2')
 define char_cls3 = Character('Classmate 3', color="FFFFFF", image='i_cls3', callback=name_callback, cb_name='cls3')
 define char_cls4 = Character('Classmate 4', color="FFFFFF", image='i_cls4', callback=name_callback, cb_name='cls4')
+define char_fclerk = Character('Girl', color="FFA680", image='i_fmc', callback=name_callback, cb_name='fmc')
 
 #images
 

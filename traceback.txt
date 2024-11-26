@@ -1,61 +1,89 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/screens.rpy", line 798, in execute
-    screen preferences():
-  File "game/screens.rpy", line 798, in execute
-    screen preferences():
-  File "game/screens.rpy", line 802, in execute
-    use main_menu(_("Preferences"), scroll="viewport"):
-TypeError: too many positional arguments
+Compiling ATL code at game/chapter1.rpy:107
+  File "game/chapter1.rpy", line 110, in script
+    
+  File "game/chapter1.rpy", line 110, in script
+    
+  File "renpy/common/000window.rpy", line 132, in _window_auto_callback
+    _window_show(auto=True)
+  File "renpy/common/000window.rpy", line 75, in _window_show
+    renpy.with_statement(trans)
+  File "game/chapter1.rpy", line 107, in <module>
+    # Flashback with the Bookstore Owner
+  File "renpy/common/00matrixcolor.rpy", line 414, in SepiaMatrix
+    return TintMatrix(tint) * SaturationMatrix(0.0, desat)
+  File "renpy/common/00matrixcolor.rpy", line 203, in __init__
+    self.color = Color(color)
+TypeError: 'float' object is not iterable
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
-    python hide:
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\ast.py", line 821, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
-    python hide:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
-    ui.interact()
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\display\core.py", line 2188, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\display\core.py", line 2705, in interact_core
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  [Previous line repeated 1 more time]
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\display\screen.py", line 480, in visit_all
-    callback(self)
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\display\core.py", line 2705, in <lambda>
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\display\screen.py", line 491, in per_interact
-    self.update()
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\display\screen.py", line 697, in update
-    self.screen.function(**self.scope)
-  File "game/screens.rpy", line 798, in execute
-    screen preferences():
-  File "game/screens.rpy", line 798, in execute
-    screen preferences():
-  File "game/screens.rpy", line 802, in execute
-    use main_menu(_("Preferences"), scroll="viewport"):
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\parameter.py", line 313, in apply
-    _raise(TypeError, 'too many positional arguments')
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\parameter.py", line 253, in _raise
-    raise exct(msg.format(*argz, **kwargz)) # from None
-TypeError: too many positional arguments
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\main.py", line 652, in main
+    run(restart)
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\main.py", line 148, in run
+    renpy.execution.run_context(True)
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\execution.py", line 958, in run_context
+    context.run()
+  File "game/chapter1.rpy", line 110, in script
+    
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "game/chapter1.rpy", line 110, in script
+    
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\ast.py", line 2572, in execute
+    Say.execute(self)
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\ast.py", line 583, in execute
+    statement_name(stmt_name)
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\ast.py", line 52, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 132, in _window_auto_callback
+    _window_show(auto=True)
+  File "renpy/common/000window.rpy", line 75, in _window_show
+    renpy.with_statement(trans)
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\exports\statementexports.py", line 257, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\display\core.py", line 1547, in do_with
+    self.with_none()
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\display\core.py", line 1574, in with_none
+    for layer, d in self.compute_scene(scene_lists).items():
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\display\core.py", line 1752, in compute_scene
+    rv[layer] = scene_lists.transform_layer(layer, d)
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\display\scenelists.py", line 761, in transform_layer
+    self.transform_state(old_transform, new_transform, execution=True)
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\display\scenelists.py", line 307, in transform_state
+    old_transform.update_state()
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\display\transform.py", line 1217, in update_state
+    fr = self.execute(self, fst, fat)
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\atl.py", line 755, in execute
+    block = self.compile()
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\atl.py", line 723, in compile
+    block = self.atl.compile(self.context)
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\atl.py", line 925, in compile
+    statements = [ i.compile(ctx) for i in self.statements ]
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\atl.py", line 925, in <listcomp>
+    statements = [ i.compile(ctx) for i in self.statements ]
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\atl.py", line 1266, in compile
+    value = ctx.eval(expr)
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\atl.py", line 387, in eval
+    return renpy.python.py_eval(expr, locals=self.context)
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/chapter1.rpy", line 107, in <module>
+    # Flashback with the Bookstore Owner
+  File "renpy/common/00matrixcolor.rpy", line 414, in SepiaMatrix
+    return TintMatrix(tint) * SaturationMatrix(0.0, desat)
+  File "renpy/common/00matrixcolor.rpy", line 203, in __init__
+    self.color = Color(color)
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\color.py", line 172, in __new__
+    c = tuple(c)
+TypeError: 'float' object is not iterable
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.0.24082114
 Lifespan 1.0
-Mon Nov 25 18:12:01 2024
+Wed Nov 27 00:58:33 2024
