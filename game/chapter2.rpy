@@ -1,5 +1,11 @@
 label chapter2:
 
+    scene bg black with dissolve
+
+    show text "Chapter 2" with Pause(1.5)
+
+    #scene bg office with dissolve
+
     # Scene: Girl's announcement
     char_fmc "Your evaluation will take about three hours."
 
@@ -74,7 +80,7 @@ label chapter2:
     #play music "audio/mysterious_bgm.mp3"
     #window show
 
-    return
+
 
 
     return

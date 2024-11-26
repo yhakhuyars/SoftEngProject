@@ -2,9 +2,14 @@
 
 
 label chapter1:
+
+    show text "Chapter 1" with Pause(1.5)
+
     scene black with dissolve
 
     scene bg sunny with dissolve
+    
+    play 
 
     char_mc "I’m really sorry."
 
@@ -99,7 +104,7 @@ label chapter1:
     # End flashback and return to Kusonoki's present thoughts
     # window hide
     # scene bg room with fade
-    # window show
+    #window show
 
     char_mc "(A shop dealing in lifespan… It could only be the fantasy of an old man nearing his death.)"
     char_mc "(Because, I mean… wouldn’t that just be too good to be true?)"
