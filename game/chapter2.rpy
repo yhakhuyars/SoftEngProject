@@ -12,10 +12,12 @@ label chapter2:
 
     stop music fadeout 1.0
 
+    scene bg black with dissolve
+    pause 1.0
+
     # Transition to flashback
-    #window hide
-    #scene bg classroom_day with fade
-    #play music "audio/classroom_bgm.mp3"
+    scene bg classroom with fade
+    play music "audio/bgm_classroom.mp3"
     #window show
 
     # Teacher's dialogue
@@ -74,14 +76,12 @@ label chapter2:
     char_mc "(As it happens, the teacher said that there was no right answer.)"
     char_mc "(But a right answer did sort of exist.)"
 
+    scene bg black with dissolve
+    pause 0.5
+
+    stop music fadeout 2.0
     # End flashback and return to the present
     #window hide
-    #scene bg mysterious_building with fade
-    #stop music fadeout 2.0
-    #play music "audio/mysterious_bgm.mp3"
-    #window show
-
-    scene bg shop # You'll need to define this background
     
     # Ten years later narration
     char_mc "(Ten years later, when I was twenty-one, I did in fact sell my lifespan and learn its value.)"
@@ -94,7 +94,12 @@ label chapter2:
 
     char_mc "(However, I'd forgotten that thought I had.)"
 
+    scene bg office with fade
+
     # Shop girl interaction
+
+    play music "audio/bgm_think.mp3"
+
     char_fclerk "Mr. Kusonoki, your evaluation has been completed"
 
     char_mc "\"Mr. Kusonoki.\""
@@ -158,6 +163,8 @@ label chapter2:
     
     char_fclerk "How much it contributes to society, so on and so forth… These things decide the value."
 
+    scene bg black with dissolve
+
     char_mc "(Won't achieve any dreams,)"
     char_mc "(Won't contribute to society…)"
     char_mc "(Where can I look to for salvation…?)"
@@ -165,7 +172,7 @@ label chapter2:
     # Final narration
     char_mc "(Ultimately, I sold off all thirty years, keeping only three months.)"
 
-
+    stop music fadeout 1.0
 
 
     return

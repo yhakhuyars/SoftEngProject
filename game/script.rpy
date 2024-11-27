@@ -33,24 +33,26 @@ label splashscreen:
 
     ## Here begins our splashscreen animation.
     show splash_anim_1
-    show text "{size=60}NOKOTAN TECH {/s}":
+    show text "{size=100}NOKOTECH {/s}":
         xalign 0.5 yalign 0.8 alpha 0.0
-        pause 6.0
+        pause 2.0
         linear 1.0 alpha 1.0
+
+    play sound "audio/nokotech.mp3"
     
     ## The first time the game is launched, players cannot skip the animation.
     if not persistent.seen_splash:
         
         ## No input will be detected for the set time stated.
         ## Set this to be a little longer than how long the animation takes.
-        $ renpy.pause(8.5, hard=True)
+        $ renpy.pause(5.5, hard=True)
  
         $ persistent.seen_splash = True
     
     ## Players can skip the animation in subsequent launches of the game.
     else:
  
-        if renpy.pause(8.5):
+        if renpy.pause(5.5):
  
             jump skip_splash
 

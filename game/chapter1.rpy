@@ -12,8 +12,6 @@ label chapter1:
    
     scene black with dissolve
 
-    char_mc "I’m really sorry."
-
     char_mc "(A part-time job in blazing heat.)"
 
     char_mc "(After deeply bowing my head with the eleventh 'I’m really sorry of the day' it seems I had a dizzy spell and fell unconscious.)"
@@ -24,6 +22,14 @@ label chapter1:
 
     char_mc "(The manager sent me a text telling me to rest, but I don’t think I’ll be hearing back from him tomorrow.)"
 
+    char_mc "(and I don't have anything to eat for tonight.)"
+
+    char_mc "..."
+
+    char_mc "(My wallet is empty as well.)"
+
+    char_mc "I guess I don't have a choice."
+
     char_mc "(Parting with my CDs and books made my heart ache.)"
 
     char_mc "(They were all second-hand, purchases I’d made with careful considerations.)"
@@ -31,6 +37,8 @@ label chapter1:
     char_mc "(But my room lacked even a computer or a TV. By now, my CDs and books seemed the only things left that could get me any money.)"
 
     char_mc "(With a heavy heart, I packed it up in a bag and went outside in the scorching heat.)"
+
+    play sound "audio/sfx/footsteps.mp3"
 
     scene black with dissolve
     pause 3.0
