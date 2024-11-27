@@ -300,58 +300,58 @@ screen navigation():
 
         if main_menu: 
             textbutton _("Start"):
-                hover_sound "audio/338229__fachii__button-hover.wav"
-                activate_sound "audio/338229__fachii__button-hover.wav"
+                hover_sound "audio/hoversoundmouse.wav"
+                activate_sound "audio/clicksoundmouse.wav"
                 action Start()
             xoffset 60
 
         else:
 
             textbutton _("History"):
-                hover_sound "audio/338229__fachii__button-hover.wav"
-                activate_sound "audio/338229__fachii__button-hover.wav"
+                hover_sound "audio/hoversoundmouse.wav"
+                activate_sound "audio/clicksoundmouse.wav"
                 action ShowMenu("history")
 
             textbutton _("Save"):
-                hover_sound "audio/338229__fachii__button-hover.wav"
-                activate_sound "audio/338229__fachii__button-hover.wav"
+                hover_sound "audio/hoversoundmouse.wav"
+                activate_sound "audio/clicksoundmouse.wav"
                 action ShowMenu("save")
 
         textbutton _("Load"):
-            hover_sound "audio/338229__fachii__button-hover.wav"
-            activate_sound "audio/338229__fachii__button-hover.wav"
+            hover_sound "audio/hoversoundmouse.wav"
+            activate_sound "audio/clicksoundmouse.wav"
             action ShowMenu("load")
 
         textbutton _("Preferences"):
-            hover_sound "audio/338229__fachii__button-hover.wav"
-            activate_sound "audio/338229__fachii__button-hover.wav"        
+            hover_sound "audio/hoversoundmouse.wav"
+            activate_sound "audio/clicksoundmouse.wav"        
             action ShowMenu("preferences")
 
         if _in_replay:
 
             textbutton _("End Replay"):
-                hover_sound "audio/338229__fachii__button-hover.wav"
-                activate_sound "audio/338229__fachii__button-hover.wav"
+                hover_sound "audio/hoversoundmouse.wav"
+                activate_sound "audio/clicksoundmouse.wav"
                 action EndReplay(confirm=True)
 
         elif not main_menu:
 
             textbutton _("Main Menu"): 
-                hover_sound "audio/338229__fachii__button-hover.wav"
-                activate_sound "audio/338229__fachii__button-hover.wav"
+                hover_sound "audio/hoversoundmouse.wav"
+                activate_sound "audio/clicksoundmouse.wav"
                 action MainMenu()
 
         textbutton _("About"):
-            hover_sound "audio/338229__fachii__button-hover.wav"
-            activate_sound "audio/338229__fachii__button-hover.wav"
+            hover_sound "audio/hoversoundmouse.wav"
+            activate_sound "audio/clicksoundmouse.wav"
             action ShowMenu("about")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
             textbutton _("Help"):
-                hover_sound "audio/338229__fachii__button-hover.wav"
-                activate_sound "audio/338229__fachii__button-hover.wav"
+                hover_sound "audio/hoversoundmouse.wav"
+                activate_sound "audio/clicksoundmouse.wav"
                 action ShowMenu("help")
 
         if renpy.variant("pc"):
@@ -359,8 +359,8 @@ screen navigation():
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
             textbutton _("Quit"):
-                hover_sound "audio/338229__fachii__button-hover.wav"
-                activate_sound "audio/338229__fachii__button-hover.wav"
+                hover_sound "audio/hoversoundmouse.wav"
+                activate_sound "audio/clicksoundmouse.wav"
                 action Quit(confirm=not main_menu)
 
 
@@ -572,7 +572,10 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
     use navigation
 
     textbutton _("Return"):
+        hover_sound "audio/hoversoundmouse.wav"
+        activate_sound "audio/clicksoundmouse.wav"
         style "return_button"
+        
 
         action Return()
 
@@ -1088,11 +1091,20 @@ screen help():
 
             hbox:
 
-                textbutton _("Keyboard") action SetScreenVariable("device", "keyboard")
-                textbutton _("Mouse") action SetScreenVariable("device", "mouse")
+                textbutton _("Keyboard"): 
+                    hover_sound "audio/hoversoundmouse.wav"
+                    activate_sound "audio/clicksoundmouse.wav"
+                    action SetScreenVariable("device", "keyboard")
+                textbutton _("Mouse"):
+                    hover_sound "audio/hoversoundmouse.wav"
+                    activate_sound "audio/clicksoundmouse.wav"
+                    action SetScreenVariable("device", "mouse")
 
                 if GamepadExists():
-                    textbutton _("Gamepad") action SetScreenVariable("device", "gamepad")
+                    textbutton _("Gamepad"): 
+                        hover_sound "audio/hoversoundmouse.wav"
+                        activate_sound "audio/clicksoundmouse.wav"
+                        action SetScreenVariable("device", "gamepad")
 
             if device == "keyboard":
                 use keyboard_help
@@ -1267,8 +1279,14 @@ screen confirm(message, yes_action, no_action):
                 xalign 0.5
                 spacing 150
 
-                textbutton _("Yes") action yes_action
-                textbutton _("No") action no_action
+                textbutton _("Yes"): 
+                    hover_sound "audio/hoversoundmouse.wav"
+                    activate_sound "audio/clicksoundmouse.wav"
+                    action yes_action
+                textbutton _("No"):
+                    hover_sound "audio/hoversoundmouse.wav"
+                    activate_sound "audio/clicksoundmouse.wav"
+                    action no_action
 
     ## Right-click and escape answer "no".
     key "game_menu" action no_action

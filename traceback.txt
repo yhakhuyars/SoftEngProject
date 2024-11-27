@@ -1,89 +1,37 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-Compiling ATL code at game/chapter1.rpy:107
-  File "game/chapter1.rpy", line 110, in script
-    
-  File "game/chapter1.rpy", line 110, in script
-    
-  File "renpy/common/000window.rpy", line 132, in _window_auto_callback
-    _window_show(auto=True)
-  File "renpy/common/000window.rpy", line 75, in _window_show
-    renpy.with_statement(trans)
-  File "game/chapter1.rpy", line 107, in <module>
-    # Flashback with the Bookstore Owner
-  File "renpy/common/00matrixcolor.rpy", line 414, in SepiaMatrix
-    return TintMatrix(tint) * SaturationMatrix(0.0, desat)
-  File "renpy/common/00matrixcolor.rpy", line 203, in __init__
-    self.color = Color(color)
-TypeError: 'float' object is not iterable
+While running game code:
+  File "renpy/common/00keymap.rpy", line 504, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 504, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 528, in _execute_python_hide
+    renpy.save("_reload-1", "reload save game")
+PicklingError: Can't pickle <class 'store.director.AddStatement'>: it's not the same object as store.director.AddStatement
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\bootstrap.py", line 359, in bootstrap
-    renpy.main.main()
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\main.py", line 652, in main
-    run(restart)
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\main.py", line 148, in run
-    renpy.execution.run_context(True)
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\execution.py", line 958, in run_context
-    context.run()
-  File "game/chapter1.rpy", line 110, in script
-    
+  File "renpy/common/00keymap.rpy", line 504, in script
+    python hide:
+  File "C:\Users\User\Desktop\Renpy\renpy-8.3.2-sdk\renpy\ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\User\Desktop\Renpy\renpy-8.3.2-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00keymap.rpy", line 504, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 528, in _execute_python_hide
+    renpy.save("_reload-1", "reload save game")
+  File "C:\Users\User\Desktop\Renpy\renpy-8.3.2-sdk\renpy\loadsave.py", line 431, in save
+    reraise(t, e, tb)
   File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
-  File "game/chapter1.rpy", line 110, in script
-    
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\ast.py", line 2572, in execute
-    Say.execute(self)
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\ast.py", line 583, in execute
-    statement_name(stmt_name)
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\ast.py", line 52, in statement_name
-    i(name)
-  File "renpy/common/000window.rpy", line 132, in _window_auto_callback
-    _window_show(auto=True)
-  File "renpy/common/000window.rpy", line 75, in _window_show
-    renpy.with_statement(trans)
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\exports\statementexports.py", line 257, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\display\core.py", line 1547, in do_with
-    self.with_none()
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\display\core.py", line 1574, in with_none
-    for layer, d in self.compute_scene(scene_lists).items():
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\display\core.py", line 1752, in compute_scene
-    rv[layer] = scene_lists.transform_layer(layer, d)
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\display\scenelists.py", line 761, in transform_layer
-    self.transform_state(old_transform, new_transform, execution=True)
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\display\scenelists.py", line 307, in transform_state
-    old_transform.update_state()
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\display\transform.py", line 1217, in update_state
-    fr = self.execute(self, fst, fat)
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\atl.py", line 755, in execute
-    block = self.compile()
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\atl.py", line 723, in compile
-    block = self.atl.compile(self.context)
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\atl.py", line 925, in compile
-    statements = [ i.compile(ctx) for i in self.statements ]
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\atl.py", line 925, in <listcomp>
-    statements = [ i.compile(ctx) for i in self.statements ]
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\atl.py", line 1266, in compile
-    value = ctx.eval(expr)
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\atl.py", line 387, in eval
-    return renpy.python.py_eval(expr, locals=self.context)
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/chapter1.rpy", line 107, in <module>
-    # Flashback with the Bookstore Owner
-  File "renpy/common/00matrixcolor.rpy", line 414, in SepiaMatrix
-    return TintMatrix(tint) * SaturationMatrix(0.0, desat)
-  File "renpy/common/00matrixcolor.rpy", line 203, in __init__
-    self.color = Color(color)
-  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\color.py", line 172, in __new__
-    c = tuple(c)
-TypeError: 'float' object is not iterable
+  File "C:\Users\User\Desktop\Renpy\renpy-8.3.2-sdk\renpy\loadsave.py", line 417, in save
+    dump((roots, renpy.game.log), logf)
+  File "C:\Users\User\Desktop\Renpy\renpy-8.3.2-sdk\renpy\compat\pickle.py", line 107, in dump
+    pickle.dump(o, f, pickle.HIGHEST_PROTOCOL if highest else PROTOCOL)
+PicklingError: Can't pickle <class 'store.director.AddStatement'>: it's not the same object as store.director.AddStatement
 
-Windows-10-10.0.22631 AMD64
-Ren'Py 8.3.0.24082114
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.3.2.24090902
 Lifespan 1.0
-Wed Nov 27 00:58:33 2024
+Wed Nov 27 13:50:07 2024
