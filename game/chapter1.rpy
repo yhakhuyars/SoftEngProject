@@ -30,6 +30,8 @@ label chapter1:
 
     char_mc "I guess I don't have a choice."
 
+    char_mc "Like it or not, I need money for food."
+
     char_mc "(Parting with my CDs and books made my heart ache.)"
 
     char_mc "(They were all second-hand, purchases I’d made with careful considerations.)"
@@ -49,7 +51,11 @@ label chapter1:
 
     play music "audio/bgm_library.mp3"
 
-    char_mc "Hello. I’m here to sell some books."
+    char_bk "Good afternoon. Your name is [povname] right? "
+
+    char_bk "Anything I can help you with?"
+
+    char_mc "Hello, I'm here to sell some books"
 
     char_bk "…."
 
@@ -61,19 +67,31 @@ label chapter1:
 
     char_mc "Well, paper doesn’t make for a good meal. Not much nutritional value."
 
-    char_bk "Short on cash, eh… it’ll take about thirty minutes to evaluate your books."
+    char_bk "Short on cash, eh… it’ll take a few minutes to evaluate your books."
 
-    char_mc "(With that, I meandered around the store browsing until the owner called me over.)"
+    char_mc "Thanks, I'll wait here."
 
-    char_mc "(He handed me the cash for my books, which I figured should last me days at most.)"
+    char_mc "(With that, I meandered around the store browsing the shelves)"
+
+    "The shelves are fully stacked with rows and rows of books."
+
+    "You recognize a few of the titles such as the classic  \"How to kill a Mockingbird\" "
+
+    "While looking through the shelves, you heard the bookkeeper call your name."
+
+    char_bk "Here you go."
+
+    char_mc "(He handed me the cash for my books, )which I figured should last me days at most.)"
 
     char_bk "Hey."
 
     char_bk "I’ve got something to tell you about."
 
-    char_mc "…"
-
-    char_mc "What is it?"
+    menu:
+        "Ignore":
+            char_mc "…"
+        "What is it?":
+            char_mc "What is it?"
 
     char_bk "You’re strapped for cash right?"
 
@@ -122,7 +140,12 @@ label chapter1:
 
     char_bk "Besides lifespan, apparently they’ll buy 'time' and 'health' too."
 
-    char_mc "What’s the difference between lifespan and time?"
+    menu:
+        "What's the difference?":
+            char_mc "What’s the difference between lifespan and time?"
+
+        "That's crazy talk.":
+            char_mc "What are you saying man."
 
     char_bk "Couldn’t tell you any details. It’s not like I’ve ever sold any of it."
 
@@ -142,6 +165,8 @@ label chapter1:
 
     char_mc "These."
 
+    "I say as I place a dozen CDs on the counter"
+
     char_clerk "…"
 
     char_clerk "What kinda turn of events is this?"
@@ -149,9 +174,14 @@ label chapter1:
     # Kusonoki's inner thoughts
     char_clerk "I don’t know who you are, but why let go of so many CDs?)"
     char_mc "(Its the same reaction as the old bookstore owner.)"
-    char_mc "(Just like before, I explained why I had no choice but to sell them.)"
-
-    char_clerk "In that case, I’ve got somethin’ good for you."
+    menu:
+        "Explain":
+            char_mc "(Just like before, I explained why I had no choice but to sell them.)"
+            char_clerk "In that case, I’ve got somethin’ good for you."
+        "It's a long story":
+            char_mc "It's a long story"
+            char_clerk "Nah I think I understand."
+            char_clerk "Actually, I think I can help with that!"
 
     char_clerk "See, the truth is, bro, I’m pretty into your taste in music!"
 
@@ -171,13 +201,15 @@ label chapter1:
     char_clerk "Here ya go."
 
     scene black with dissolve
+
+    "He hands me a paper with a crude drawing of a map marking the supposed shop that buys lifespan."
     # Kusonoki's reflection
-    char_mc "(Needless to say, his directions perfectly matched the old man’s.)"
+    "Needless to say, his directions perfectly matched the old man’s."
 
     stop music fadeout 1.0
     play sound "audio/sfx/footsteps.mp3"
     # Kusonoki's inner thoughts
-    char_mc "(In the end, I found myself standing in front of that building.)"
+    "In the end, I found myself standing in front of that building."
     
 
     scene bg street_night
@@ -194,14 +226,24 @@ label chapter1:
 
     scene bg office
     play music bgm_think
+
     char_fclerk "Your time?"
 
+    pause 0.5
+
+    show i_fmc office at size_normal, center
+    with dissolve
+
     char_fclerk "Your health?"
+
+    pause 0.5
 
     char_fclerk "Or your lifespan?"
 
     pause 0.5
 #BRANCH FLAG
+    char_mc ". . ."
+
     char_mc "… Lifespan."
 
     jump chapter2

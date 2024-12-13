@@ -287,6 +287,96 @@ style quick_button_text:
 
 screen navigation():
 
+    fixed:
+        style_prefix "navigation"
+
+        if renpy.get_screen("main_menu"):
+            xalign 0.5
+        else:
+            xoffset 60
+        yalign 0.5
+
+        spacing gui.navigation_spacing
+
+        if main_menu: 
+            imagebutton auto "gui/mm_start_%s.png" xpos 840 ypos 420 focus_mask True:
+                hover_sound "audio/hoversoundmouse.wav"
+                activate_sound "audio/clicksoundmouse.wav"
+                action Start()
+            xoffset 60
+
+        else:
+
+            textbutton _("History"):
+                hover_sound "audio/hoversoundmouse.wav"
+                activate_sound "audio/clicksoundmouse.wav"
+                action ShowMenu("history")
+
+            textbutton _("Save"):
+                hover_sound "audio/hoversoundmouse.wav"
+                activate_sound "audio/clicksoundmouse.wav"
+                action ShowMenu("save")
+
+        #textbutton _("Load"):
+        imagebutton auto "gui/mm_load_%s.png" xpos 845 ypos 502 focus_mask True:
+            hover_sound "audio/hoversoundmouse.wav"
+            activate_sound "audio/clicksoundmouse.wav"
+            action ShowMenu("load")
+
+        #textbutton _("Preferences"):
+        imagebutton auto "gui/mm_options_%s.png" xpos 845 ypos 573 focus_mask True:
+            hover_sound "audio/hoversoundmouse.wav"
+            activate_sound "audio/clicksoundmouse.wav"        
+            action ShowMenu("preferences")
+
+        if _in_replay:
+
+            textbutton _("End Replay"):
+                hover_sound "audio/hoversoundmouse.wav"
+                activate_sound "audio/clicksoundmouse.wav"
+                action EndReplay(confirm=True)
+
+        elif not main_menu:
+
+            textbutton _("Main Menu"): 
+                hover_sound "audio/hoversoundmouse.wav"
+                activate_sound "audio/clicksoundmouse.wav"
+                action MainMenu()
+
+        #textbutton _("About"):
+            #hover_sound "audio/hoversoundmouse.wav"
+            #activate_sound "audio/clicksoundmouse.wav"
+            #action ShowMenu("about")
+
+        #if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+
+            ## Help isn't necessary or relevant to mobile devices.
+            ####action ShowMenu("help")
+
+        if renpy.variant("pc"):
+
+            ## The quit button is banned on iOS and unnecessary on Android and
+            ## Web.
+            #textbutton _("Quit"):
+            imagebutton auto "gui/mm_quit_%s.png" xpos 845 ypos 643 focus_mask True:
+                hover_sound "audio/hoversoundmouse.wav"
+                activate_sound "audio/clicksoundmouse.wav"
+                action Quit(confirm=not main_menu)
+
+
+style navigation_button is gui_button
+style navigation_button_text is gui_button_text
+
+style navigation_button:
+    size_group "navigation"
+    properties gui.button_properties("navigation_button")
+
+style navigation_button_text:
+    properties gui.text_properties("navigation_button")
+    xalign 0.5
+
+screen navigation2():
+
     vbox:
         style_prefix "navigation"
 
@@ -322,7 +412,7 @@ screen navigation():
             activate_sound "audio/clicksoundmouse.wav"
             action ShowMenu("load")
 
-        textbutton _("Preferences"):
+        textbutton _("Options"):
             hover_sound "audio/hoversoundmouse.wav"
             activate_sound "audio/clicksoundmouse.wav"        
             action ShowMenu("preferences")
@@ -362,19 +452,6 @@ screen navigation():
                 hover_sound "audio/hoversoundmouse.wav"
                 activate_sound "audio/clicksoundmouse.wav"
                 action Quit(confirm=not main_menu)
-
-
-style navigation_button is gui_button
-style navigation_button_text is gui_button_text
-
-style navigation_button:
-    size_group "navigation"
-    properties gui.button_properties("navigation_button")
-
-style navigation_button_text:
-    properties gui.text_properties("navigation_button")
-    xalign 0.5
-
 ## Main Menu screen ############################################################
 ##
 ## Used to display the main menu when Ren'Py starts.
@@ -449,9 +526,10 @@ screen main_menu():
     tag menu
 
     #add gui.main_menu_background
-    add TrackCursor("gui/main_menu1.png", 20)
-    add TrackCursor("gui/main_menu2.png", 13)
-    add TrackCursor("gui/main_menu3.png", 10)
+    #add TrackCursor("gui/main_menu1.png", 20)
+    add gui.main_menu_background
+    #add TrackCursor("gui/main_menu2.png", 13)
+    #add TrackCursor("gui/main_menu3.png", 10)
 
     ## This empty frame darkens the main menu.
     frame:
@@ -569,7 +647,7 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
 
                     transclude
 
-    use navigation
+    use navigation2
 
     textbutton _("Return"):
         hover_sound "audio/hoversoundmouse.wav"
@@ -664,8 +742,8 @@ screen about():
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
-
+            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n A Software Engineering Project by NOKOTECH \n Members: \n Stephen Carl Cagampang - Leader")
+            text _(" Gabriel Luke Tocle - Tester \n Jon Paolo Dimarucut - Designer \n Erwin Dane Yarra - Programmer \n\n[renpy.license!t]")
 
 style about_label is gui_label
 style about_label_text is gui_label_text
@@ -832,7 +910,7 @@ screen preferences():
 
     tag menu
 
-    use game_menu(_("Preferences"), scroll="viewport"):
+    use game_menu(_("Options"), scroll="viewport"):
 
         vbox:
 

@@ -6,6 +6,9 @@ label chapter2:
 
     scene bg office with dissolve
 
+    show i_fmc office at size_normal, center
+    with dissolve
+
     char_fclerk "Your evaluation will take about three hours."
 
     char_mc "(When they first mentioned “selling lifespan”, what immediately came to mind was a morality lesson from elementary school.)"
@@ -29,7 +32,7 @@ label chapter2:
     char_cmc "I know."
     char_cmc "A salaryman, over the course of their life, earns about 100 million to 300 million yen. That’s what I read in a book once."
 
-    char_mc "(The class’s biggest smart-aleck answered.)"
+    "The class’s biggest smart-aleck answered."
 
     # Teacher responds
     char_t "Even if you asked an adult, well…."
@@ -63,7 +66,7 @@ label chapter2:
     # Classmate 3's reaction
     char_cls3 "You can’t assign a value to a person’s life!"
 
-    char_mc "(... said one girl with gloomy prospects.)"
+    "... said one girl with gloomy prospects."
     char_mc "(If we’re talking about the chance to live her life, yeah, I wouldn’t give that a value.)"
 
     # Classmate 4's joke
@@ -101,6 +104,11 @@ label chapter2:
     play music "audio/bgm_think.mp3"
 
     char_fclerk "Mr. Kusonoki, your evaluation has been completed"
+
+    show i_fmc office at size_normal, center
+    with dissolve
+
+    char_fclerk "..."
 
     char_mc "\"Mr. Kusonoki.\""
 

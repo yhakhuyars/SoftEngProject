@@ -2,6 +2,24 @@ label prologue:
 
     scene black with dissolve
 
+    show text "What is your name?" at truecenter
+    with dissolve
+    pause 1
+    hide text
+    with dissolve
+
+    $ povname = renpy.input("My name is . . .", length=32)
+    $ povname = povname.strip()
+
+    if not povname:
+        $ povname = "Kusonoki"
+    
+    
+    jump chapter1
+    
+    
+label prologue1:
+
     show text "Prologue" with Pause(1.5)
 
     scene black with dissolve
