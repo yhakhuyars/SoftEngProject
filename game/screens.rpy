@@ -528,7 +528,7 @@ screen main_menu():
     #add gui.main_menu_background
     #add TrackCursor("gui/main_menu1.png", 20)
     add gui.main_menu_background
-    #add TrackCursor("gui/main_menu2.png", 13)
+    add TrackCursor("gui/main_menu4.png", 13)
     #add TrackCursor("gui/main_menu3.png", 10)
 
     ## This empty frame darkens the main menu.
