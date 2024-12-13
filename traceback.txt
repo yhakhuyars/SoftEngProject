@@ -1,37 +1,41 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00keymap.rpy", line 504, in script
-    python hide:
-  File "renpy/common/00keymap.rpy", line 504, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 528, in _execute_python_hide
-    renpy.save("_reload-1", "reload save game")
-PicklingError: Can't pickle <class 'store.director.AddStatement'>: it's not the same object as store.director.AddStatement
+  File "game/chapter2.rpy", line 53, in script
+    char_mc "(I get it.)"
+NameError: name 'povname' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00keymap.rpy", line 504, in script
-    python hide:
-  File "C:\Users\User\Desktop\Renpy\renpy-8.3.2-sdk\renpy\ast.py", line 821, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\User\Desktop\Renpy\renpy-8.3.2-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/00keymap.rpy", line 504, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 528, in _execute_python_hide
-    renpy.save("_reload-1", "reload save game")
-  File "C:\Users\User\Desktop\Renpy\renpy-8.3.2-sdk\renpy\loadsave.py", line 431, in save
-    reraise(t, e, tb)
-  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
-  File "C:\Users\User\Desktop\Renpy\renpy-8.3.2-sdk\renpy\loadsave.py", line 417, in save
-    dump((roots, renpy.game.log), logf)
-  File "C:\Users\User\Desktop\Renpy\renpy-8.3.2-sdk\renpy\compat\pickle.py", line 107, in dump
-    pickle.dump(o, f, pickle.HIGHEST_PROTOCOL if highest else PROTOCOL)
-PicklingError: Can't pickle <class 'store.director.AddStatement'>: it's not the same object as store.director.AddStatement
+  File "game/chapter2.rpy", line 53, in script
+    char_mc "(I get it.)"
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\ast.py", line 2572, in execute
+    Say.execute(self)
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\exports\sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\character.py", line 1434, in __call__
+    who = self.prefix_suffix("who", self.who_prefix, who, self.who_suffix)
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\character.py", line 1350, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\character.py", line 1330, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\substitutions.py", line 373, in substitute
+    s = interpolate(s, variables) # type: ignore
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\substitutions.py", line 86, in interpolate
+    raise e
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\substitutions.py", line 78, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\GOG Games\Renpy\renpy-8.3.0-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+NameError: name 'povname' is not defined
 
-Windows-10-10.0.19045 AMD64
-Ren'Py 8.3.2.24090902
+Windows-10-10.0.22631 AMD64
+Ren'Py 8.3.0.24082114
 Lifespan 1.0
-Wed Nov 27 13:50:07 2024
+Sat Dec 14 00:50:35 2024

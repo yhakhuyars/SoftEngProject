@@ -12,9 +12,9 @@ label chapter1:
    
     scene black with dissolve
 
-    char_mc "(A part-time job in blazing heat.)"
+    "A part-time job in blazing heat."
 
-    char_mc "(After deeply bowing my head with the eleventh 'I’m really sorry of the day' it seems I had a dizzy spell and fell unconscious.)"
+    "After deeply bowing my head with the eleventh 'I’m really sorry of the day' it seems I had a dizzy spell and fell unconscious."
 
     play sound "audio/sfx/Interior-Door_Close.mp3"
 
@@ -53,7 +53,13 @@ label chapter1:
 
     char_bk "Good afternoon. Your name is [povname] right? "
 
+    show i_bk normal at size_normal, right
+    with dissolve
+
     char_bk "Anything I can help you with?"
+
+    show i_mc old_normal at left, flip, size_normal
+    with dissolve
 
     char_mc "Hello, I'm here to sell some books"
 
@@ -61,11 +67,17 @@ label chapter1:
 
     char_bk "Are you moving or something?"
 
+    show i_mc old_disturbed
+
     char_mc "No. Nothing like that."
 
     char_bk "Well then, why do something so wasteful?"
 
+    show i_mc old_normal
+
     char_mc "Well, paper doesn’t make for a good meal. Not much nutritional value."
+
+    show i_bk thinking
 
     char_bk "Short on cash, eh… it’ll take a few minutes to evaluate your books."
 
@@ -73,17 +85,30 @@ label chapter1:
 
     char_mc "(With that, I meandered around the store browsing the shelves)"
 
+    hide i_bk
+    with dissolve
+    hide i_mc
+    with dissolve
+
     "The shelves are fully stacked with rows and rows of books."
 
     "You recognize a few of the titles such as the classic  \"How to kill a Mockingbird\" "
 
     "While looking through the shelves, you heard the bookkeeper call your name."
 
+    show i_bk normal at size_normal, right
+    with dissolve
+
     char_bk "Here you go."
+
+    show i_mc old_normal at left, flip, size_normal
+    with dissolve
 
     char_mc "(He handed me the cash for my books, )which I figured should last me days at most.)"
 
     char_bk "Hey."
+
+    show i_bk mysterious
 
     char_bk "I’ve got something to tell you about."
 
@@ -95,19 +120,29 @@ label chapter1:
 
     char_bk "You’re strapped for cash right?"
 
+    show i_mc old_normal
+
     char_mc "…"
 
     char_mc "It’s not like it’s anything recent."
+
+    show i_bk normal
 
     char_bk "Well, I don’t care how poor you are, or why things got that way. That’s not my interest."
 
     char_bk "I just wanna ask you one thing."
 
+    show i_bk mysterious
+
     char_bk "You wanna sell some of your lifespan?"
 
     char_mc "…"
 
+    show i_mc old_disturbed
+
     char_mc "What."
+
+    show i_bk normal
 
     char_bk "Yeah, lifespan. Oh, but, it’s not like I’m the one buying it."
 
@@ -136,6 +171,9 @@ label chapter1:
 
     scene bg library with fade
 
+    show i_bk normal at size_normal, center
+    with dissolve
+
     char_bk "I don’t really know much at all, but you don’t look like a bad guy and you’ve got a decent taste in books. Your life must have some value right?"
 
     char_bk "Besides lifespan, apparently they’ll buy 'time' and 'health' too."
@@ -146,6 +184,7 @@ label chapter1:
 
         "That's crazy talk.":
             char_mc "What are you saying man."
+    show i_bk thinking
 
     char_bk "Couldn’t tell you any details. It’s not like I’ve ever sold any of it."
 

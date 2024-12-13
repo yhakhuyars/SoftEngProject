@@ -13,12 +13,16 @@ define char_fclerk = Character('Girl', color="FFA680", image='i_fmc', callback=n
 
 #images
 
-image i_mc normal = At('mc_normal', sprite_highlight('mc'))
+image i_mc old_normal = At('mc_old_neutral', sprite_highlight('mc'))
+image i_mc old_disturbed = At('mc_old_disturbed', sprite_highlight('mc'))
 image i_cmc normal = At('miyagi_normal', sprite_highlight('cmc'))
 image i_cmc sad = At('miyagi_sad', sprite_highlight('cmc'))
 image i_cmc annoy = At('miyagi_annoy', sprite_highlight('cmc'))
 image i_cmc smile = At('miyagi_smile', sprite_highlight('cmc'))
 image i_fmc office = At('miyagi_office', sprite_highlight('fmc'))
+image i_bk normal = At('5_normal', sprite_highlight('bk'))
+image i_bk thinking = At('5_thinking', sprite_highlight('bk'))
+image i_bk mysterious = At('5_mysterious', sprite_highlight('bk'))
 
 transform size_normal:
     ysize 1000
@@ -31,6 +35,10 @@ transform size_close:
 transform size_far:
     ysize 800
     fit "contain"
+
+init: 
+    transform flip: 
+        xzoom -1.0
 
 image splash_anim_1:
 
